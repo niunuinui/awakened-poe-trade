@@ -45,6 +45,8 @@ jobs:
       with:
         name: renderer-dist
         path: ./renderer/dist
+    - run: yarn install
+      working-directory: ./main
     - run: yarn --frozen-lockfile
       working-directory: ./main
     - run: yarn build
