@@ -16,6 +16,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
+    - run: yarn install
+      working-directory: ./renderer
     - run: yarn --frozen-lockfile
       working-directory: ./renderer
     - run: yarn make-index-files
